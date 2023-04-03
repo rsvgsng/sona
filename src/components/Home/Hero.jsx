@@ -16,7 +16,7 @@ function Hero() {
         <div className="hero-text">
           <h1>Shradha Modern City Hotel</h1>
           <p>
-            Welcome to Shradha Hotel, where comfort meets luxury! Our hotel is located in the heart of Birtamode, Jhapa, providing easy access to all the city's major attractions. Whether you're in town for business or pleasure, our hotel offers exceptional amenities to make your stay unforgettable. With modern and tastefully designed rooms, we offer the perfect setting for a peaceful and comfortable night's sleep. Our friendly and professional staff are always on hand to assist you, ensuring that you have a hassle-free stay. At Shradha Hotel, we take pride in providing our guests with an exceptional experience, so book your stay with us today and let us take care of the rest!
+            Welcome to Shradha Hotel, where comfort meets luxury! Our hotel is located in the heart of Birtamode, Jhapa, providing easy access to all the city's major attractions. Whether you're in town for business or pleasure, our hotel offers exceptional amenities to make your stay unforgettable.
           </p>
           <a onClick={
             () => navigate('/Explore')

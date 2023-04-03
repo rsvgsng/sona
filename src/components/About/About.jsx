@@ -2,15 +2,55 @@ import React, { useState } from 'react'
 import vbg from '../../assets/video-bg.jpg'
 import b from '../../assets/room-b2.jpg'
 import { motion } from "framer-motion"
-
 import { Gallery } from "react-grid-gallery";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
+import { getAll } from '../../Contentful'
 function About() {
 
-  const [index, setIndex] = useState(-1);
 
-  const images = [{
+  const [data, setData] = React.useState([])
+  const [loading, setLoading] = React.useState(true)
+
+  React.useEffect(() => { 
+  //    {
+  //   src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+  //   original: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+  //   width: 320,
+  //   height: 212,
+  //   caption: "Color Pencils (Jeshu John - designerspics.com)",
+  // }
+      
+      (async () => {
+        const data = await getAll('gallery')
+    
+        var datae = []
+    
+        data?.map((e, key) => {
+          datae.push({
+            src:'https:'+e.fields.image.fields.file.url,
+            original:'https:'+e.fields.image.fields.file.url,
+            width:e.fields.width,
+            height: e.fields.height,
+            caption:e.fields.caption
+
+          })
+          setData(datae)
+        })
+        setLoading(false)
+      })()
+      window.scrollTo(0, 0)
+  
+  }, [])
+
+  const [index, setIndex] = useState(-1);
+  
+
+
+
+  
+  const images = [
+    { 
     src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
     original: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
     width: 320,
@@ -203,11 +243,11 @@ function About() {
     caption: "A photo by Matthew Wiebe. (unsplash.com)",
   },]
 
-  const currentImage = images[index];
-  const nextIndex = (index + 1) % images.length;
-  const nextImage = images[nextIndex] || currentImage;
-  const prevIndex = (index + images.length - 1) % images.length;
-  const prevImage = images[prevIndex] || currentImage;
+  const currentImage = data[index];
+  const nextIndex = (index + 1) % data.length;
+  const nextImage = data[nextIndex] || currentImage;
+  const prevIndex = (index + data.length - 1) % data.length;
+  const prevImage = data[prevIndex] || currentImage;
 
   const handleClick = (index, item) => setIndex(index);
   const handleClose = () => setIndex(-1);
@@ -321,7 +361,7 @@ function About() {
           <div className="row">
             <div className="col-12">
             <Gallery
-              images={images}
+              images={data}
               onClick={handleClick}
               enableImageSelection={false}
             />

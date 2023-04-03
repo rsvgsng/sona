@@ -9,6 +9,7 @@ const [data,setData]=React.useState([])
 const [loading,setLoading]=React.useState(true)
 React.useEffect(()=>{
   (async()=>{
+    
    const a=  await getSingle(id,'blogPost')
    if(a.length<1) return window.location.href="/"
     setLoading(false)
