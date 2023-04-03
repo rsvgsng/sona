@@ -1,0 +1,116 @@
+
+.footer_section {
+	background: #222736;
+}
+.footer_section .footer_text {
+	padding: 80px 0 30px;
+}
+.footer_section .footer_text .ft_about {
+	margin-bottom: 30px;
+}
+.footer_section .footer_text .ft_about .logo {
+	margin-bottom: 20px;
+}
+.footer_section .footer_text .ft_about .logo a {
+	display: inline-block;
+}
+.footer_section .footer_text .ft_about p {
+	color: #aaaab3;
+	margin-bottom: 20px;
+}
+.footer_section .footer_text .ft_about .fa_social a {
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	font-size: 16px;
+	line-height: 40px;
+	text-align: center;
+	color: #ffffff;
+	border: 1px solid #5A4D48;
+	border-radius: 50%;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	margin-right: 7px;
+}
+.footer_section .footer_text .ft_about .fa_social a:hover {
+	background: #dfa974;
+	border-color: #dfa974;
+}
+.footer_section .footer_text .ft_contact {
+	margin-bottom: 30px;
+}
+.footer_section .footer_text .ft_contact h6 {
+	font-size: 14px;
+	color: #dfa974;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 3px;
+	font-family: "Cabin", sans-serif;
+	margin-bottom: 20px;
+}
+.footer_section .footer_text .ft_contact ul li {
+	font-size: 16px;
+	color: #aaaab3;
+	line-height: 32px;
+	list-style: none;
+}
+.footer_section .footer_text .ft_newslatter h6 {
+	font-size: 14px;
+	color: #dfa974;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 3px;
+	font-family: "Cabin", sans-serif;
+	margin-bottom: 20px;
+}
+.footer_section .footer_text .ft_newslatter p {
+	color: #aaaab3;
+	margin-bottom: 20px;
+}
+.footer_section .footer_text .ft_newslatter .fn_form {
+	position: relative;
+}
+.footer_section .footer_text .ft_newslatter .fn_form input {
+	width: 100%;
+	height: 50px;
+	border-radius: 2px;
+	background: #393D4A;
+	border: none;
+	padding-left: 20px;
+	font-size: 16px;
+	color: #707079;
+}
+.footer_section .footer_text .ft_newslatter .fn_form button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 16px;
+	background: #dfa974;
+	color: #ffffff;
+	padding: 0 16px;
+	height: 50px;
+	border: none;
+	border-radius: 0 2px 2px 0;
+}
+.footer_section .copyright_option {
+	background: rgba(16, 20, 31, 0.2);
+	padding: 20px 0;
+}
+.footer_section .copyright_option ul li {
+	list-style: none;
+	display: inline-block;
+	margin-right: 34px;
+}
+.footer_section .copyright_option ul li:last-child {
+	margin-right: 0;
+}
+.footer_section .copyright_option ul li a {
+	font-size: 16px;
+	color: #aaaab3;
+}
+.footer_section .copyright_option .co-text {
+	font-size: 16px;
+	color: #707079;
+	text-align: right;
+}
